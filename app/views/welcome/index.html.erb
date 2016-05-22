@@ -1,0 +1,19 @@
+<h1>Enter Your Login Information</h1>
+
+<%= link_to 'Fake Login', controller: 'employees' %>
+
+<%= form_for :article do |f| %>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
