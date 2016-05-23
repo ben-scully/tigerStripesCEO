@@ -1,0 +1,26 @@
+<h1>Listing Employers</h1>
+
+<%= link_to 'New Employer', new_employer_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Phone</th>
+  </tr>
+
+  <% @employers.each do |employer| %>
+    <tr>
+      <td><%= employer.name %></td>
+      <td><%= employer.email %></td>
+      <td><%= employer.role %></td>
+      <td><%= employer.phone %></td>
+      <td><%= link_to 'Show', employer_path(employer) %></td>
+      <td><%= link_to 'Edit', edit_employer_path(employer) %></td>
+      <td><%= link_to 'Destroy', employer_path(employer),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

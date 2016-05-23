@@ -15,5 +15,25 @@
   <%= @employee.phone %>
 </p>
 
+<p>
+  <strong>DriverLicence #:</strong>
+  <%= @employee.dlicenceNumber %>
+</p>
+
+<p>
+  <strong>DriverLicence Expiry:</strong>
+  <%= @employee.dlicenceExpiry %>
+</p>
+
+<p>
+  <strong>WoF Expiry:</strong>
+  <%= @employee.wof_expiry %>
+</p>
+
+<p>
+  <strong>Registration Expiry:</strong>
+  <%= @employee.rego_expiry %>
+</p>
+
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

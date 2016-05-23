@@ -1,0 +1,24 @@
+<h1>Employer</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employer.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @employer.role %>
+</p>
+
+<p>
+  <strong>Phone #:</strong>
+  <%= @employer.phone %>
+</p>
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>

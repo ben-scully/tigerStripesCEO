@@ -5,21 +5,22 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Driver Licence #</th>
-    <th>Driver Licence Expiry</th>
+    <th>DriverLicence</th>
+    <th>Registration</th>
+    <th>WoF</th>
   </tr>
 
   <% @employees.each do |employee| %>
     <tr>
       <td><%= employee.name %></td>
-      <td><%= employee.email %></td>
-      <td><%= employee.phone %></td>
-      <td><%= employee.dlicenceNumber %></td>
       <td><%= employee.dlicenceExpiry %></td>
+      <td><%= employee.wof_expiry %></td>
+      <td><%= employee.rego_expiry %></td>
       <td><%= link_to 'Show', employee_path(employee) %></td>
       <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+      <td><%= link_to 'Destroy', employee_path(employee),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

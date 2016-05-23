@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522215713) do
+ActiveRecord::Schema.define(version: 20160523043806) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20160522215713) do
     t.date     "dlicenceExpiry"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "wof_expiry"
+    t.string   "rego_expiry"
+  end
+
+  create_table "employers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "role"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
