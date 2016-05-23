@@ -5,6 +5,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Company</th>
     <th>Email</th>
     <th>Role</th>
     <th>Phone</th>
@@ -13,6 +14,7 @@
   <% @employers.each do |employer| %>
     <tr>
       <td><%= employer.name %></td>
+      <td><%= employer.company %></td>
       <td><%= employer.email %></td>
       <td><%= employer.role %></td>
       <td><%= employer.phone %></td>
